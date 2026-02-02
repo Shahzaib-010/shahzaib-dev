@@ -1,4 +1,4 @@
-import { useInView } from "../Animations/useInView";
+import { useInView } from "../animations/useInView";
 
 const steps = [
   {

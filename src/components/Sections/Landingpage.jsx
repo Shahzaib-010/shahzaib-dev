@@ -81,7 +81,7 @@
 
 
 import { motion, useScroll, useTransform } from "motion/react";
-import Magnet from "../Ui.jsx/Magnet";
+import Magnet from "../ui/Magnet";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
