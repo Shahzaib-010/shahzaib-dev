@@ -25,7 +25,7 @@ const steps = [
 
 export default function Approach() {
   return (
-    <section className="w-full py-32 bg-black text-white">
+    <section className="w-full py-32 text-white">
       {/* Heading */}
       <div className="text-center mb-20">
         <h2 className="text-5xl md:text-6xl font-clash-medium text-gradient">

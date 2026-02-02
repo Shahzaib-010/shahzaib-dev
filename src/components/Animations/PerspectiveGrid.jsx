@@ -1,8 +1,8 @@
 import React from "react";
 
 function PerspectiveGrid({
-  size = 64,
-  opacity = 0.10,
+  size = 72,
+  opacity = 0.08,
   className = "",
 }) {
   return (
@@ -15,9 +15,9 @@ function PerspectiveGrid({
         `,
         backgroundSize: `${size}px ${size}px`,
         maskImage:
-          "radial-gradient(circle at center, black 65%, transparent 100%)",
+          "radial-gradient(circle at center, black 90%, transparent 100%)",
         WebkitMaskImage:
-          "radial-gradient(circle at center, black 55%, transparent 100%)",
+          "radial-gradient(circle at center, black 80%, transparent 100%)",
       }}
     />
   );

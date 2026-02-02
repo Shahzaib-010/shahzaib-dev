@@ -168,14 +168,14 @@ function Perspective() {
 
   return (
     /* 🔥 MAIN WRAPPER */
-    <section className="relative min-h-screen w-full bg-black overflow-hidden">
-      <PerspectiveGrid/>
+    <section className="relative min-h-screen w-full  overflow-hidden">
+      
       
       {/* 🔲 VERCEL GRID BACKGROUND */}
     
 
       {/* 🔝 CONTENT LAYER */}
-      <div className="relative z-10 flex flex-col items-center p-4">
+      <div className="relative flex flex-col items-center p-4">
 
         {/* HERO */}
         <div className="h-[100vh] flex flex-col justify-center w-full">

@@ -121,7 +121,7 @@ const item = {
 
 export default function SkillsSection() {
   return (
-    <section className="bg-black py-20 sm:py-24">
+    <section className=" py-20 sm:py-24">
       <div className="mx-auto max-w-8xl px-5 sm:px-6">
         <motion.div
           variants={container}

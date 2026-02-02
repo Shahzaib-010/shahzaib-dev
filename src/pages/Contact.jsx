@@ -43,9 +43,9 @@ function Contact() {
   };
 
   return (
-    <section className="bg-black w-full min-h-screen h-[140vh] relative">
+    <section className=" w-full min-h-screen h-[140vh] relative">
       
-       <PerspectiveGrid  opacity={0.06}/>
+       
 
       <div className="w-full h-full flex flex-col items-center pt-[4vw]  z-10 relative">
         {/* TITLE */}

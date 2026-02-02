@@ -7,14 +7,15 @@ import Footer from "../components/Sections/Footer";
 import Work from "./Work";
 import Approach from "../components/Sections/Approach";
 import PerspectiveGrid from '../components/Animations/PerspectiveGrid'
+import FAQSection from "../components/Sections/faq/FAQSection";
 
 
 export default function Home() {
   return (
-    <section className="min-h-screen w-full bg-black overflow-hidden relative">
+    <section className="min-h-screen w-full  overflow-hidden relative">
       
      
-  <PerspectiveGrid />
+ 
         <div className="flex flex-col justify-center items-center">
           
           {/* Top Section */}
@@ -24,7 +25,7 @@ export default function Home() {
           </div>
           
           {/* About Section */}
-          <div className=" ">
+          <div className="w-full ">
             <About />
           </div>
 
@@ -37,6 +38,11 @@ export default function Home() {
           <div className=" w-full">
             <Work />
           </div>
+
+           <div className=" ">
+            <FAQSection/>
+          </div>
+
 
           {/* Example Placeholder Section */}
           

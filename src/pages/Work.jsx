@@ -2,7 +2,7 @@ import React from "react";
 
 function Work() {
   return (
-    <section className="w-full  bg-black flex  flex-col justify-around items-center p-4">
+    <section className="w-full   flex  flex-col justify-around items-center p-4">
       <div className="flex justify-between">
         <div className="flex flex-col">
           <p className="lg:text-xl font-bold text-[var(--color-orange)] font-wix2 ">
@@ -23,7 +23,7 @@ function Work() {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center item-center w-full">
+      <div className="flex flex-col justify-center item-center w-full z-10">
         <div className="flex flex-col justify-between item center py-[7vw] space-y-[7vw]">
           <div className="flex justify-around items-center space-x-10 ">
             <div className="flex flex-col justify-center item-center">
