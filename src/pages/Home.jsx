@@ -1,12 +1,7 @@
-import React from "react";
-import Navbar from "../components/Sections/Navbar";
-import { motion } from "motion/react"; 
 import About from "./About";
 import Landingpage from "../components/Sections/Landingpage";
-import Footer from "../components/Sections/Footer";
 import Work from "./Work";
 import Approach from "../components/Sections/Approach";
-import PerspectiveGrid from '../components/animations/PerspectiveGrid'
 import FAQSection from "../components/Sections/faq/FAQSection";
 
 

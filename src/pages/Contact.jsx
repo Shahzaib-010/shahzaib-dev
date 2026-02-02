@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import Navbar from "../components/Sections/Navbar";
-import Footer from "../components/Sections/Footer"
-import PerspectiveGrid from "../components/Animations/PerspectiveGrid";
+
+
 
 function Contact() {
   const [form, setForm] = useState({
