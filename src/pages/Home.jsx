@@ -7,7 +7,7 @@ import Footer from "../components/Sections/Footer";
 import Work from "./Work";
 import Approach from "../components/Sections/Approach";
 import PerspectiveGrid from '../components/Animations/PerspectiveGrid'
-import FAQSection from "../components/Sections/faq/FAQSection";
+import FAQSection from "../components/Sections/Faq/FAQSection";
 
 
 export default function Home() {
