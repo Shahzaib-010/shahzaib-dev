@@ -8,14 +8,14 @@ export default function LightboxModal({
   onClose,
   setActiveIndex,
 }) {
+  if (activeIndex === null) return null;
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = "";
     };
   }, []);
-
-  if (activeIndex === null) return null;
 
   return (
     <AnimatePresence>
@@ -45,6 +45,11 @@ export default function LightboxModal({
             alt=""
             className="max-h-[70vh] max-w-[80vw] object-contain rounded-xl"
           />
+
+          {/* COUNT */}
+          <div className="absolute -top-12 left-0 text-xs uppercase tracking-[0.35em] text-white/70 font-switzer">
+            {String(activeIndex + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
+          </div>
 
           {/* CLOSE */}
           <button
