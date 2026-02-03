@@ -3,6 +3,7 @@ import Landingpage from "../components/Sections/Landingpage";
 import Work from "./Work";
 import Approach from "../components/Sections/Approach";
 import FAQSection from "../components/Sections/faq/FAQSection";
+import TechSection from "../components/Sections/TechSection";
 
 
 export default function Home() {
@@ -24,6 +25,9 @@ export default function Home() {
             <About />
           </div>
 
+          <div className="w-full">
+            <TechSection />
+          </div>
 
           <div className=" ">
             <Approach/>

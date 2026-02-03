@@ -3,37 +3,140 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="w-full flex justify-center item-center  ">
-      <div className="w-[98%] rounded-2xl   p-8">
-        <div className="flex flex-col">
-          {/* upper footer sec */}
-          <div className="flex justify-between">
-            <img
-              src="./images/pfp.jpeg"
-              alt="pfp"
-              className="md:w-[18vw] rounded-2xl"
-            />
+    <footer className="w-full flex justify-center items-center text-white">
+      <div className="w-[98%] rounded-2xl border border-white/10 bg-black/60 backdrop-blur-xl px-6 py-10 md:px-10 md:py-12">
+        <div className="flex flex-col gap-10">
+          {/* Top Row */}
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 pb-[4vw]">
+            <div className="flex items-center gap-5">
+             
+              <div>
+                <p className="text-sm uppercase tracking-[0.2em] text-white/60 font-switzer">
+                  Let’s Collaborate <span className="text-[var(--color-orange)] font-extrabold"> :) </span>
+                </p>
+                <h3 className="text-2xl md:text-3xl font-clash-medium tracking-wide">
+                  Ready to build something <span className="text-[var(--color-orange)] font-clash-bold"> bold? </span>
+                </h3>
+              </div>
+            </div>
 
-            <button className="px-[6vw] h-[10vw] bg-[#161616] rounded-full  font-bold font-wix2 text-white text-[3vw]">
+            <a
+              href="mailto:letsmail.shahzaib@gmail.com"
+              className="w-fit rounded-full border border-white/10 bg-white/10 px-8 py-4 text-sm md:text-base font-clash-semibold uppercase tracking-wider hover:bg-white/20 transition-colors"
+            >
               letsmail.shahzaib@gmail.com
-            </button>
+            </a>
           </div>
 
-          {/* middle footer sec */}
+          {/* Content Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Links */}
+            <div className="space-y-3">
+              <p className="text-sm uppercase tracking-[0.2em] text-white/60 font-switzer">
+                Links
+              </p>
+              <div className="flex flex-col gap-2 font-switzer">
+                <Link to="/" className="hover:text-[var(--color-orange)]">
+                  Home
+                </Link>
+                <Link to="/about" className="hover:text-[var(--color-orange)]">
+                  About
+                </Link>
+                <Link to="/work" className="hover:text-[var(--color-orange)]">
+                  Work
+                </Link>
+                <Link to="/perspective" className="hover:text-[var(--color-orange)]">
+                  Perspective
+                </Link>
+                <Link to="/contact" className="hover:text-[var(--color-orange)]">
+                  Contact
+                </Link>
+              </div>
+            </div>
 
-          <div className="flex justify-between items-center w-[80%]  h-30">
-            {/* <div className="flex flex-col ">
-           <p className="text-2xl text-white">
-            <Link to="/">Home</Link>
-           </p>
-            </div> */}
+            {/* Socials */}
+            <div className="space-y-3">
+              <p className="text-sm uppercase tracking-[0.2em] text-white/60 font-switzer">
+                Socials
+              </p>
+              <div className="flex flex-col gap-2 font-switzer">
+                <a
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-[var(--color-orange)]"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href="https://www.behance.net"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-[var(--color-orange)]"
+                >
+                  Behance
+                </a>
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-[var(--color-orange)]"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-[var(--color-orange)]"
+                >
+                  Instagram
+                </a>
+              </div>
+            </div>
+
+            {/* Contact Info */}
+            <div className="space-y-3 font-clash-regular">
+              <p className="text-sm uppercase tracking-[0.2em] text-white/60 font-clash-medium">
+                Contact Info
+              </p>
+              <div className="flex flex-col gap-2 font-switzer text-white/80">
+                <p>Lahore, Pakistan</p>
+                
+                <a
+                  href="tel:+923000000000"
+                  className="hover:text-[var(--color-orange)]"
+                >
+                  +92 313 0672552
+                </a>
+              </div>
+            </div>
+
+            {/* Quick Note */}
+            <div className="space-y-3">
+              <p className="text-sm uppercase tracking-[0.2em] text-white/60 font-clash-medium">
+                Get in Touch
+              </p>
+              <p className="text-white font-clash-regular leading-relaxed tracking-wide">
+                I’m open to freelance, full-time, and short-term collaborations.
+                Let’s create a meaningful digital experience.
+              </p>
+            </div>
           </div>
 
-          {/* lower footer sec */}
-          <div className="font-wix2 font-bold flex justify-center ">
-            <h1 className=" text-[#161616] text-[21vw] leading-none">
-              Shahzaib.
+          {/* Copyright */}
+         
+
+          {/* Big Name */}
+          <div className="font-wix2 font-bold flex justify-center">
+            <h1 className="text-[#161616] text-[21vw] leading-none">
+              Shahzaib
             </h1>
+          </div>
+
+           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm text-white/60 font-switzer">
+            <p>© 2026 Shahzaib. All rights reserved.</p>
+            <p>Design & Development by <span className="text-[var(--color-orange)]"> Shahzaib ;)</span></p>
           </div>
         </div>
       </div>

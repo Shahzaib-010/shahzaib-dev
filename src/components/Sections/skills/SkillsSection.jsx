@@ -2,30 +2,53 @@ import { motion } from "framer-motion";
 import SkillCard from "./SkillCard";
 
 const skills = [
- 
   {
     name: "Figma",
-    desc: "Design Tool",
+    desc: "UI Design",
     icon: "/images/icons/figma.svg",
     bgClass: "bg-cyan-400/10 border-white/10 border",
   },
   {
-    name: "React Js",
-    desc: "JavaScript Library",
+    name: "React",
+    desc: "Frontend Library",
     icon: "/images/icons/react.svg",
     bgClass: "bg-blue-400/10 border-white/10 border",
   },
   {
     name: "JavaScript",
-    desc: "Scripting Language",
+    desc: "Core Language",
     icon: "/images/icons/javascript.svg",
     bgClass: "bg-yellow-400/10 border-white/10 border",
   },
   {
-    name: "Node Js",
-    desc: "Backend",
+    name: "TypeScript",
+    desc: "Typed JavaScript",
+    icon: "/images/icons/typescript.svg",
+    bgClass: "bg-sky-400/10 border-white/10 border",
+  },
+  {
+    name: "Next.js",
+    desc: "React Framework",
+    icon: "/images/icons/nextjs1.svg",
+    bgClass: "bg-stone-600/10 border-white/10 border",
+  },
+  {
+    name: "Tailwind CSS",
+    desc: "Utility Styling",
+    icon: "/images/icons/tailwindcss.svg",
+    bgClass: "bg-cyan-400/10 border-white/10 border",
+  },
+  {
+    name: "Node.js",
+    desc: "Backend Runtime",
     icon: "/images/icons/nodejs.svg",
     bgClass: "bg-lime-400/10 border-white/10 border",
+  },
+  {
+    name: "MongoDB",
+    desc: "Document DB",
+    icon: "/images/icons/mongodb.svg",
+    bgClass: "bg-emerald-400/10 border-white/10 border",
   },
   {
     name: "Git",
@@ -34,72 +57,41 @@ const skills = [
     bgClass: "bg-orange-400/10 border-white/10 border",
   },
   {
-    name: "MongoDB",
-    desc: "React framework",
-    icon: "/images/icons/mongodb.svg",
-    bgClass: "bg-emerald-400/10 border-white/10 border",
-  },
-  {
-    name: "TypeScript",
-    desc: "React framework",
-    icon: "/images/icons/typescript.svg",
-    bgClass: "bg-sky-400/10 border-white/10 border",
-  },
-  {
-    name: "Git Hub",
-    desc: "React framework",
+    name: "GitHub",
+    desc: "Repo Hosting",
     icon: "/images/icons/github.svg",
     bgClass: "bg-slate-500/10 border-white/10 border",
   },
   {
-    name: "TypeScript",
-    desc: "React framework",
-    icon: "/images/icons/typescript.svg",
-    bgClass: "bg-sky-400/10 border-white/10 border",
-  },
-  {
-    name: "Next.js",
-    desc: "React framework",
-    icon: "/images/icons/nextjs1.svg",
-    bgClass: "bg-stone-600/10 border-white/10 border",
-  },
-  {
-    name: "Tailwind CSS",
-    desc: "CSS Framework",
-    icon: "/images/icons/tailwindcss.svg",
-    bgClass: "bg-cyan-400/10 border-white/10 border",
-  },
-  {
     name: "Vite",
-    desc: "React framework",
+    desc: "Build Tool",
     icon: "/images/icons/vite.svg",
     bgClass: "bg-indigo-400/10 border-white/10 border",
   },
   {
     name: "Material UI",
-    desc: "React framework",
+    desc: "Component Library",
     icon: "/images/icons/materialui.svg",
     bgClass: "bg-blue-400/10 border-white/10 border",
   },
   {
-    name: "Html",
-    desc: "React framework",
+    name: "HTML",
+    desc: "Structure",
     icon: "/images/icons/html.svg",
     bgClass: "bg-orange-400/10 border-white/10 border",
   },
   {
     name: "CSS",
-    desc: "React framework",
+    desc: "Styling",
     icon: "/images/icons/css.svg",
     bgClass: "bg-sky-400/10 border-white/10 border",
   },
   {
     name: "VS Code",
-    desc: "Code Editor",
+    desc: "Editor",
     icon: "/images/icons/vscode.svg",
     bgClass: "bg-sky-400/10 border-white/10 border",
   }
-  
 ];
 
 const container = {
@@ -121,8 +113,20 @@ const item = {
 
 export default function SkillsSection() {
   return (
-    <section className=" py-20 sm:py-24">
-      <div className="mx-auto max-w-8xl px-5 sm:px-6">
+    <section className="py-24">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="mb-12 md:mb-14">
+          <p className="text-sm uppercase tracking-[0.35em] text-white/60 font-switzer">
+            Tech Stack
+          </p>
+          <div className=" flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+            <h2 className="text-4xl md:text-6xl font-clash-medium text-gradient leading-tight">
+              Tools I Work With
+            </h2>
+            
+          </div>
+        </div>
+
         <motion.div
           variants={container}
           initial="hidden"
@@ -138,7 +142,7 @@ export default function SkillsSection() {
         >
           {skills.map((skill, i) => (
             <motion.div key={i} variants={item}>
-              <SkillCard {...skill} />
+              <SkillCard number={String(i + 1).padStart(2, "0")} {...skill} />
             </motion.div>
           ))}
         </motion.div>

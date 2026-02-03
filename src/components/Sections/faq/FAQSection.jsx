@@ -10,15 +10,20 @@ export default function FAQSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
 
         {/* Title */}
-        <motion.h2
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-3xl sm:text-4xl font-clash-semibold text-center mb-10 sm:mb-14"
-        >
-          Frequently Asked Questions
-        </motion.h2>
+        <div className="text-center mb-10 sm:mb-14">
+          <p className="text-sm uppercase tracking-[0.35em] text-white/60 font-switzer">
+            FAQ
+          </p>
+          <motion.h2
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mt-3 text-3xl sm:text-5xl font-clash-medium text-gradient"
+          >
+            Quick Answers
+          </motion.h2>
+        </div>
 
         {/* FAQ List */}
         <div className="space-y-3 sm:space-y-4 w-[60vw] bg-black">

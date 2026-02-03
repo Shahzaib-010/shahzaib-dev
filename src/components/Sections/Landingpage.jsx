@@ -82,8 +82,6 @@
 
 import { motion, useScroll, useTransform } from "motion/react";
 import Magnet from "../ui/Magnet";
-import { TiArrowSortedDown } from "react-icons/ti";
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 export default function Landingpage() {
   const { scrollYProgress } = useScroll();
@@ -93,6 +91,8 @@ export default function Landingpage() {
 
   return (
     <section className="w-full h-screen flex flex-col items-center justify-around relative overflow-hidden">
+      {/* Atmosphere removed per request */}
+
 
       {/* MAIN WRAPPER */}
       <motion.div
@@ -102,7 +102,7 @@ export default function Landingpage() {
           duration: 1.2,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="relative w-full flex justify-center pt-[12rem]"
+        className="relative w-full flex justify-center pt-[10rem]"
       >
 
         {/* LEFT TOP LABEL */}
@@ -114,7 +114,7 @@ export default function Landingpage() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute top-[35%] left-[17%] text-yellow-300 text-xl tracking-wide font-clash-regular will-change-transform"
+          className="absolute top-[32%] left-[12%] text-yellow-300 text-xl tracking-wide font-clash-regular will-change-transform"
         >
           
           <p className="relative">Creative Designer</p>
@@ -123,7 +123,7 @@ export default function Landingpage() {
         
 
         {/* MAIN HEADING */}
-        <motion.div style={{ y: headingY }} className="will-change-transform">
+        <motion.div style={{ y: headingY }} className="will-change-transform relative">
           
           <Magnet padding={50} disabled={false} magnetStrength={15}>
             <h1
@@ -134,6 +134,17 @@ export default function Landingpage() {
             </h1>
              
           </Magnet>
+          <div className="mt-6 flex flex-col items-center gap-3">
+            <p className="text-white/70 font-switzer text-sm tracking-[0.35em] uppercase">
+              Product-focused frontend developer
+            </p>
+            <motion.div
+              initial={{ width: 0, opacity: 0 }}
+              animate={{ width: "9rem", opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.9, ease: "easeOut" }}
+              className="h-px bg-gradient-to-r from-transparent via-white/80 to-transparent"
+            />
+          </div>
         </motion.div>
 
         {/* RIGHT BOTTOM LABEL */}
@@ -145,7 +156,7 @@ export default function Landingpage() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute -bottom-20 right-[10%] text-blue-500 text-xl tracking-wide font-clash-regular will-change-transform"
+          className="absolute -bottom-20 right-[8%] text-blue-500 text-xl tracking-wide font-clash-regular will-change-transform"
         >
            <img src="/images/arrow3.1.png" alt="" className="absolute rotate-180 bottom-3 -left-13 w-20 h-20 "/>
           <p className="relative text-yellow-300">Frontend Web Developer </p>
@@ -160,11 +171,32 @@ export default function Landingpage() {
         transition={{ delay: 0.6, duration: 0.8 }}
         className="w-full flex justify-between items-end-safe"
       >
-        <div className=" px-5 space-y-5 pt-4">
-          <img src="/images/github.png" className="w-6 h-6" alt="" />
-          <img src="/images/linkedin.png" className="w-6 h-6" alt="" />
-          <img src="/images/resume2.png" className="w-6 h-6" alt="" />
-          
+        <div className="px-5 pt-4 flex flex-col gap-3">
+          <a
+            href="/resume.pdf"
+            className="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-switzer tracking-[0.25em] uppercase text-white/80 hover:text-white hover:border-white/30 transition-colors"
+          >
+            <img src="/images/resume2.png" className="w-4 h-4 opacity-80 group-hover:opacity-100" alt="" />
+            Resume
+          </a>
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            rel="noreferrer"
+            className="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-switzer tracking-[0.25em] uppercase text-white/80 hover:text-white hover:border-white/30 transition-colors"
+          >
+            <img src="/images/linkedin.png" className="w-4 h-4 opacity-80 group-hover:opacity-100" alt="" />
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noreferrer"
+            className="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-switzer tracking-[0.25em] uppercase text-white/80 hover:text-white hover:border-white/30 transition-colors"
+          >
+            <img src="/images/github.png" className="w-4 h-4 opacity-80 group-hover:opacity-100" alt="" />
+            GitHub
+          </a>
         </div>
 
         <div className="rotate-90 flex items-center gap-1">
