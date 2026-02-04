@@ -17,10 +17,10 @@ const PageLayout = () => {
         <ScrollProgress />
         <Navbar />
         {/* Animated � ONLY page content transitions */}
-        <PageTransition>
+        
           <PerspectiveGrid />
           <Outlet />
-        </PageTransition>
+       
 
         {/* Static � not animated */}
         <FAQSection />
