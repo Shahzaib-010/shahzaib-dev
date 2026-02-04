@@ -43,7 +43,7 @@ const RootWrapper = () => {
       <ScrollRestoration getKey={() => null} />
       <AnimatePresence>
         {loading && (
-          <Loader durationMs={5000} onComplete={() => setLoading(false)} />
+          <Loader durationMs={3000} onComplete={() => setLoading(false)} />
         )}
       </AnimatePresence>
       <div

@@ -40,8 +40,8 @@ export default function FAQSection() {
                 <div className="border-t border-white/10 pt-5">
                   <div className="flex items-start justify-between">
                     <div>
-                      <span className="text-[10px] tracking-[0.35em] text-white/40 font-switzer">
-                        {String(index + 1).padStart(2, "0")}
+                      <span className="text-[10px] font-switzer text-[var(--color-orange)] ">
+                        /{String(index + 1).padStart(2, "0")}
                       </span>
                       <h3 className="mt-2 text-base sm:text-lg font-medium leading-snug transition-colors duration-300 group-hover:text-white">
                         {faq.question}

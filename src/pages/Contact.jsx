@@ -21,7 +21,7 @@ function Contact() {
 
     if (!form.email.trim()) {
       newErrors.email = "Email is required";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+    } else if (!/^\S+@\S+\.\S+$/.test(form.email)) {
       newErrors.email = "Enter a valid email";
     }
 
@@ -36,14 +36,15 @@ function Contact() {
     if (validate()) {
       console.log("Form Submitted:", form);
       alert("Message Sent!");
+      setForm({ name: "", email: "", message: "" });
     }
   };
 
   return (
     <section className="w-full min-h-screen relative">
-      <div className="w-full flex flex-col items-center pt-10 md:pt-10 z-10 relative">
+      <div className="w-full flex flex-col items-center pt-10 md:pt-16 z-10 relative">
         {/* TITLE */}
-        <h1 className="text-[22vw] sm:text-[14vw] lg:text-[20vw] font-wix2 uppercase leading-none text-center lg:text-left">
+        <h1 className="text-[18vw] sm:text-[14vw] lg:text-[8vw] font-extrabold uppercase leading-none text-center lg:text-left">
           <span className="bg-gradient-to-r from-red-600 to-orange-500 text-transparent bg-clip-text font-switzer2">
             Contact
           </span>
@@ -53,23 +54,23 @@ function Contact() {
         <div className="w-full max-w-[92%] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16 p-4 pt-10">
           {/* LEFT SIDE INFO */}
           <div className="w-full lg:w-[40%] flex flex-col gap-6">
-            <div className="flex items-start gap-3 ">
-              <span className="text-[10vw] sm:text-[6vw] text-orange-600 font-wix2 leading-none ">
+            <div className="flex items-start gap-3">
+              <span className="text-[10vw] sm:text-[6vw] text-orange-600 font-wix2 leading-none">
                 "
               </span>
-              <p className="text-sm sm:text-lg lg:text-xl text-white font-clash-medium leading-relaxed pt-3">
-                Got an idea in mind? Letï¿½s <span className="text-orange-600">Connect</span> and explore how I can bring
+              <p className="text-base sm:text-lg lg:text-xl text-white font-clash-medium leading-relaxed">
+                Got an idea in mind? Let’s <span className="text-orange-600">Connect</span> and explore how I can bring
                 it to life.
               </p>
             </div>
 
-            <div className="md:flex items-center gap-3 hidden md:display">
+            <div className="flex items-center gap-3">
               <img
                 src="./images/pfp.jpeg"
                 alt="pfp"
-                className="w-10 h-10 sm:w-14 sm:h-14 rounded-full object-cover"
+                className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover"
               />
-              <div className="font-clash-medium text-white text-sm md:text-md">
+              <div className="font-clash-medium text-white">
                 <p>Shahzaib Anwar</p>
                 <p className="text-white/70">Creative Developer</p>
               </div>

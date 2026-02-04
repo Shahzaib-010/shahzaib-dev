@@ -1,8 +1,8 @@
 import React from "react";
 
 function PerspectiveGrid({
-  size = 72,
-  opacity = 0.08,
+  size = 70,
+  opacity = 0.07,
   className = "",
 }) {
   return (
