@@ -8,14 +8,14 @@ const words = [
   "مرحبا",
   "Hola",
   "Ciao",
-  "Hallo",
   "Hej",
+  "Hallo",
   
   
  
 ];
 
-export default function Loader({ durationMs = 5000, onComplete }) {
+export default function Loader({ durationMs = 4000, onComplete }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
