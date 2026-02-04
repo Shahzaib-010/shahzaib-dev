@@ -11,20 +11,25 @@ export default function LightboxModal({
   if (activeIndex === null) return null;
 
   useEffect(() => {
+    const html = document.documentElement;
+    const prevBody = document.body.style.overflow;
+    const prevHtml = html.style.overflow;
     document.body.style.overflow = "hidden";
+    html.style.overflow = "hidden";
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = prevBody;
+      html.style.overflow = prevHtml;
     };
   }, []);
 
   return (
     <AnimatePresence>
-      <motion.div
-        className="fixed inset-0 z-[999] flex items-center justify-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+        <motion.div
+          className="fixed inset-0 z-[999] flex items-center justify-center overflow-hidden"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
         {/* BACKDROP */}
         <div
           onClick={onClose}

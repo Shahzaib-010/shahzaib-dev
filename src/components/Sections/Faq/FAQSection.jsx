@@ -1,21 +1,20 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {faqs} from "./faqs.js"
+import { faqs } from "./faqs.js";
 
 export default function FAQSection() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-    <section className="relative py-16 sm:py-24 text-white font-clash-light tracking-wide">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
-
+    <section className="relative py-20 sm:py-28 text-white font-clash-light tracking-wide">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Title */}
         <div className="text-center mb-10 sm:mb-14">
           <p className="text-sm uppercase tracking-[0.35em] text-white/60 font-switzer">
             FAQ
           </p>
           <motion.h2
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
@@ -26,68 +25,61 @@ export default function FAQSection() {
         </div>
 
         {/* FAQ List */}
-        <div className="space-y-3 sm:space-y-4 w-[60vw] bg-black">
+        <div className="space-y-6">
           {faqs.map((faq, index) => {
             const isOpen = activeIndex === index;
 
             return (
               <motion.div
-                layout
                 key={index}
-                onClick={() =>
-                  setActiveIndex(isOpen ? null : index)
-                }
-                className="group relative cursor-pointer rounded-xl
-                           bg-stone-400/10 border border-white/10
-                           overflow-hidden"
+                onClick={() => setActiveIndex(isOpen ? null : index)}
+                className="group cursor-pointer"
+                layout
+                transition={{ layout: { duration: 0.35, ease: "easeOut" } }}
               >
-                {/* Glow */}
-                <div
-                  className="
-                    pointer-events-none absolute inset-0 rounded-xl
-                    opacity-0 group-hover:opacity-100
-                    transition duration-300
-                    bg-white/5 blur-xl
-                  "
-                />
-
-                {/* Question */}
-                <motion.div
-                  layout
-                  className="relative z-10 flex items-center justify-between
-                             px-4 sm:px-5 py-4"
-                >
-                  <h3 className="text-base sm:text-lg font-medium leading-snug">
-                    {faq.question}
-                  </h3>
-
-                  {/* Plus / Minus */}
-                  <motion.span
-                    animate={{ rotate: isOpen ? 180 : 0 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="text-xl sm:text-2xl ml-4"
-                  >
-                    {isOpen ? "−" : "+"}
-                  </motion.span>
-                </motion.div>
-
-                {/* Answer */}
-                <AnimatePresence>
-                  {isOpen && (
-                    <motion.div
-                      layout
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.25 }}
-                      className="relative z-10 px-4 sm:px-5 pb-4"
+                <div className="border-t border-white/10 pt-5">
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <span className="text-[10px] tracking-[0.35em] text-white/40 font-switzer">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <h3 className="mt-2 text-base sm:text-lg font-medium leading-snug transition-colors duration-300 group-hover:text-white">
+                        {faq.question}
+                      </h3>
+                      <span
+                        className={`mt-2 block h-px w-0 bg-[var(--color-orange)] transition-all duration-500 ${
+                          isOpen ? "w-full" : "group-hover:w-16"
+                        }`}
+                      />
+                    </div>
+                    <motion.span
+                      animate={{ rotate: isOpen ? 45 : 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="text-xl sm:text-2xl text-white/60 transition-colors duration-300 group-hover:text-[var(--color-orange)]"
                     >
-                      <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-                        {faq.answer}
-                      </p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                      +
+                    </motion.span>
+                  </div>
+
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.div
+                        key="content"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.35, ease: "easeOut" }}
+                        className="overflow-hidden"
+                      >
+                        <div className="mt-3">
+                          <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
+                            {faq.answer}
+                          </p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               </motion.div>
             );
           })}

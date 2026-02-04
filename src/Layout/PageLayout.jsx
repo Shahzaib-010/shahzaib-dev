@@ -6,6 +6,7 @@ import PageTransition from "../components/animations/PageTransition";
 import { Outlet } from "react-router-dom";
 import PerspectiveGrid from "../components/animations/PerspectiveGrid";
 import { ScrollProgress } from "../components/animations/ScrollProgress";
+import FAQSection from "../components/Sections/faq/FAQSection";
 
 const PageLayout = () => {
   return (
@@ -27,6 +28,7 @@ const PageLayout = () => {
       </PageTransition>
 
       {/* Static — not animated */}
+      <FAQSection/>
       <Footer />
 
        </div>

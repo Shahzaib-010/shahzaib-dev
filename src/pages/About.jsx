@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "motion/react";
 import ScrollReveal from "../components/animations/ScrollReveal";
 
-
 function About() {
   return (
     <section className="w-full text-white flex flex-col items-center pt-16 pb-24">
@@ -11,20 +10,19 @@ function About() {
         <p className="text-sm uppercase tracking-[0.35em] text-white/60 font-switzer">
           About
         </p>
-        <div className=" flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <h2 className="text-4xl md:text-6xl font-clash-medium text-gradient leading-tight">
             Design Precision
           </h2>
-         
         </div>
       </div>
 
       {/* Body */}
-      <div className="w-full max-w-6xl px-6 mt-12 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-10 items-start">
+      <div className="w-full max-w-6xl px-6 mt-10 grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-8 items-start">
         {/* Reveal Text */}
-        <div className="font-clash-regular text-left md:text-3xl leading-tight tracking-wide">
+        <div className="font-clash-regular text-left text-lg md:text-2xl leading-relaxed tracking-wide max-w-xl">
           <ScrollReveal
-            text="I create unconventional yet functional web interfaces that value precision over noise. From layout systems to micro‑interactions, I focus on clarity, usability, and refined execution. Strong frontend foundations paired with a design‑aware mindset allow me to ship experiences that feel effortless to use and polished to look at."
+            text="I create unconventional yet functional web interfaces that value precision over noise. From layout systems to micro-interactions, I focus on clarity, usability, and refined execution. Strong frontend foundations paired with a design-aware mindset allow me to ship experiences that feel effortless to use and polished to look at."
             fgColor="#3a3a3a"
             bgColor="#ffffff"
           />
@@ -104,7 +102,6 @@ function About() {
           </motion.div>
         </div>
       </div>
-
     </section>
   );
 }

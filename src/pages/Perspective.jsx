@@ -1,8 +1,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import Magnet from "../components/ui/Magnet";
 import PhotoMasonry from "../components/Sections/Photography/PhotoMasonry";
-import { useEffect, useMemo, useState } from "react";
-import LightboxModal from "../components/animations/LightboxModal";
+import { useMemo, useState } from "react";
 
 const images = [
   { src: "/images/Photography/img10.webp", alt: "Light", tags: ["Sky", "Minimal"] },
@@ -27,8 +26,7 @@ const filters = ["All", "Street", "Architecture", "Sky", "Minimal"];
 
 function Perspective() {
   const { scrollYProgress } = useScroll();
-  const headingY = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]); 
-  const [activeIndex, setActiveIndex] = useState(null);
+  const headingY = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
   const [activeFilter, setActiveFilter] = useState("All");
 
   const filteredImages = useMemo(() => {
@@ -36,15 +34,11 @@ function Perspective() {
     return images.filter((img) => img.tags?.includes(activeFilter));
   }, [activeFilter]);
 
-  useEffect(() => {
-    setActiveIndex(null);
-  }, [activeFilter]);
-
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
       <div className="relative flex flex-col items-center p-4">
         {/* HERO */}
-        <div className="min-h-[90vh] flex flex-col justify-center w-full">
+        <div className="min-h-[100vh] flex flex-col justify-center w-full">
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -55,7 +49,7 @@ function Perspective() {
             <div className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 hidden sm:flex flex-col items-center gap-3">
               <div className="h-16 w-px bg-white/20" />
               <span className="text-[10px] tracking-[0.4em] uppercase text-white/50 font-switzer [writing-mode:vertical-rl] rotate-180">
-                Scroll
+                Perspective
               </span>
               <div className="h-16 w-px bg-white/20" />
             </div>
@@ -107,21 +101,23 @@ function Perspective() {
               />
               <p className="relative text-yellow-300">Content Creator</p>
             </motion.div>
-
-            {/* Left Footer Meta */}
-            <div className="absolute -bottom-16 left-[6%] text-xs md:text-sm uppercase tracking-[0.35em] text-white/50 font-switzer">
-              Gallery / 16 Frames
-            </div>
           </motion.div>
         </div>
 
-     
+        {/* HERO TO GALLERY TRANSITION */}
+        <div className="w-[90%] md:w-[80%] flex items-center gap-4 mt-6 mb-8">
+          <span className="h-px w-full bg-white/10" />
+          <span className="text-xs uppercase tracking-[0.35em] text-white/50 font-switzer">
+            Gallery
+          </span>
+          <span className="h-px w-full bg-white/10" />
+        </div>
 
         {/* GALLERY */}
         <div className="w-[90%] md:w-[80%] flex flex-col items-center">
           <div className="w-full flex flex-col items-center md:items-start">
             <p className="text-xs uppercase tracking-[0.35em] text-white/60 font-switzer">
-              Curated set Â· {filteredImages.length} frames
+              Curated set · {filteredImages.length} frames
             </p>
             <h1 className="mt-3 text-white font-clash-medium text-3xl md:text-5xl">
               World From My Lens
@@ -146,21 +142,10 @@ function Perspective() {
           </div>
 
           <div className="mt-8 w-full">
-            <PhotoMasonry
-              images={filteredImages}
-              onImageClick={(index) => setActiveIndex(index)}
-            />
+            <PhotoMasonry images={filteredImages} onImageClick={() => {}} />
           </div>
         </div>
       </div>
-
-      {/* LIGHTBOX (always top layer) */}
-      <LightboxModal
-        images={filteredImages}
-        activeIndex={activeIndex}
-        setActiveIndex={setActiveIndex}
-        onClose={() => setActiveIndex(null)}
-      />
     </section>
   );
 }

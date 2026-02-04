@@ -38,9 +38,7 @@ export default function Home() {
             <Work />
           </div>
 
-           <div className=" ">
-            <FAQSection/>
-          </div>
+          
 
 
           {/* Example Placeholder Section */}
