@@ -15,7 +15,7 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center">
           
           {/* Top Section */}
-          <div className="w-full h-[100vh] flex flex-col items-center ">
+          <div className="w-full flex flex-col items-center ">
             
             <Landingpage />
           </div>

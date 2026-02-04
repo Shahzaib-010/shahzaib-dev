@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-
-
 function Contact() {
   const [form, setForm] = useState({
     name: "",
@@ -42,82 +40,66 @@ function Contact() {
   };
 
   return (
-    <section className=" w-full min-h-screen h-[140vh] relative">
-      
-       
-
-      <div className="w-full h-full flex flex-col items-center pt-[4vw]  z-10 relative">
+    <section className="w-full min-h-screen relative">
+      <div className="w-full flex flex-col items-center pt-10 md:pt-10 z-10 relative">
         {/* TITLE */}
-        <h1 className="text-[20vw] font-extrabold uppercase leading-none text-center lg:text-left">
+        <h1 className="text-[22vw] sm:text-[14vw] lg:text-[20vw] font-wix2 uppercase leading-none text-center lg:text-left">
           <span className="bg-gradient-to-r from-red-600 to-orange-500 text-transparent bg-clip-text font-switzer2">
             Contact
           </span>
         </h1>
 
-        {/* LOWER SECTION */}
-        <div className="w-full max-w-[90%] mx-auto flex justify-between items-start p-4 pt-[5vw]">
-          {/* LEFT SIDE IMAGE */}
-          <div className="flex flex-col justify-between w-[50%] space-y-[2vw]">
-            <div className="flex">
-              <h2 className="text-[8vw] text-orange-600 font-wix2 leading-0">
+        {/* CONTENT */}
+        <div className="w-full max-w-[92%] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16 p-4 pt-10">
+          {/* LEFT SIDE INFO */}
+          <div className="w-full lg:w-[40%] flex flex-col gap-6">
+            <div className="flex items-start gap-3 ">
+              <span className="text-[10vw] sm:text-[6vw] text-orange-600 font-wix2 leading-none ">
                 "
-              </h2>
-               <p className=" text-[2vw] text-white font-clash-medium ">
-                Got an idea in mind? Let’s <span className="text-orange-600">Connect</span> and explore how I can bring
+              </span>
+              <p className="text-sm sm:text-lg lg:text-xl text-white font-clash-medium leading-relaxed pt-3">
+                Got an idea in mind? Let�s <span className="text-orange-600">Connect</span> and explore how I can bring
                 it to life.
               </p>
             </div>
 
-           
-
-            <div className="flex justify-start items-center space-x-2">
+            <div className="md:flex items-center gap-3 hidden md:display">
               <img
                 src="./images/pfp.jpeg"
                 alt="pfp"
-                className="w-[8vw] md:w-[5vw] rounded-full object-cover"
+                className="w-10 h-10 sm:w-14 sm:h-14 rounded-full object-cover"
               />
-
-              <div className="font-clash-medium font-light text-white ">
-                
-              <p>Shahzaib Anwar</p>
-              <p>Creative Developer</p>
+              <div className="font-clash-medium text-white text-sm md:text-md">
+                <p>Shahzaib Anwar</p>
+                <p className="text-white/70">Creative Developer</p>
               </div>
             </div>
           </div>
 
-          {/* <img
-            src="./images/pfp.jpeg"
-            alt="pfp"
-            className="w-[25vw] md:w-[10vw] rounded-full object-cover"
-          /> */}
-
           {/* RIGHT SIDE FORM */}
           <form
             onSubmit={handleSubmit}
-            className="w-[55vw] md:w-[35vw] flex flex-col gap-[4vw] md:gap-[1.5vw] font-switzer"
+            className="w-full lg:w-[55%] flex flex-col gap-6 font-switzer"
           >
             {/* NAME */}
-            <div className="flex flex-col w-full text-white ">
+            <div className="flex flex-col w-full text-white">
               <input
                 type="text"
                 name="name"
                 placeholder="Your Name*"
                 value={form.name}
                 onChange={handleChange}
-                className={`w-full bg-transparent outline-none border-b-1 border-b-neutral-400 
+                className={`w-full bg-transparent outline-none border-b border-b-neutral-400 
                   ${
                     errors.name
                       ? "border-red-500"
                       : "border-transparent focus:border-orange-500"
                   }
-                  text-[4vw] md:text-[1.2vw] pb-[1.5vw] md:pb-[0.5vw]
-                  placeholder-gray-500 transition-all duration-300`}
+                  text-base sm:text-lg pb-3 placeholder-gray-500 transition-all duration-300`}
               />
 
               {errors.name && (
-                <p className="text-red-500 text-[3vw] md:text-[0.9vw] mt-[1vw]">
-                  {errors.name}
-                </p>
+                <p className="text-red-500 text-sm mt-2">{errors.name}</p>
               )}
             </div>
 
@@ -129,20 +111,17 @@ function Contact() {
                 placeholder="Your Email*"
                 value={form.email}
                 onChange={handleChange}
-                className={`w-full bg-transparent outline-none border-b-1 border-b-neutral-400  
+                className={`w-full bg-transparent outline-none border-b border-b-neutral-400  
                   ${
                     errors.email
                       ? "border-red-500"
                       : "border-transparent focus:border-orange-500"
                   }
-                  text-[4vw] md:text-[1.2vw] pb-[1.5vw] md:pb-[0.5vw]
-                  placeholder-gray-500 transition-all duration-300`}
+                  text-base sm:text-lg pb-3 placeholder-gray-500 transition-all duration-300`}
               />
 
               {errors.email && (
-                <p className="text-red-500 text-[3vw] md:text-[0.9vw] mt-[1vw]">
-                  {errors.email}
-                </p>
+                <p className="text-red-500 text-sm mt-2">{errors.email}</p>
               )}
             </div>
 
@@ -154,21 +133,18 @@ function Contact() {
                 placeholder="Your Message*"
                 value={form.message}
                 onChange={handleChange}
-                rows="4"
-                className={`w-full bg-transparent outline-none border-b-1 border-b-neutral-400   
+                rows="5"
+                className={`w-full bg-transparent outline-none border-b border-b-neutral-400   
                   ${
                     errors.message
                       ? "border-red-500"
                       : "border-transparent focus:border-orange-500"
                   }
-                  text-[4vw] md:text-[1.2vw] pb-[1.5vw] md:pb-[0.5vw]
-                  placeholder-gray-500 transition-all duration-300`}
+                  text-base sm:text-lg pb-3 placeholder-gray-500 transition-all duration-300`}
               />
 
               {errors.message && (
-                <p className="text-red-500 text-[3vw] md:text-[0.9vw] mt-[1vw]">
-                  {errors.message}
-                </p>
+                <p className="text-red-500 text-sm mt-2">{errors.message}</p>
               )}
             </div>
 
@@ -176,15 +152,13 @@ function Contact() {
             <button
               type="submit"
               className="bg-orange-500 hover:bg-orange-600 text-black font-clash-medium
-              text-[4vw] md:text-[1.2vw] px-[5vw] md:px-[2vw] py-[2vw] md:py-[0.8vw]
-              rounded-md w-fit transition-all duration-300"
+              text-sm sm:text-base px-6 py-3 rounded-md w-fit transition-all duration-300"
             >
               SEND MESSAGE
             </button>
           </form>
         </div>
       </div>
-      
     </section>
   );
 }

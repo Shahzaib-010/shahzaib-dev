@@ -9,12 +9,11 @@ function Footer() {
           {/* Top Row */}
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 pb-[4vw]">
             <div className="flex items-center gap-5">
-             
               <div>
-                <p className="text-sm uppercase tracking-[0.2em] text-white/60 font-switzer">
-                  Let’s Collaborate <span className="text-[var(--color-orange)] font-extrabold"> :) </span>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-white/60 font-switzer">
+                  Let's Collaborate <span className="text-[var(--color-orange)] font-extrabold"> :) </span>
                 </p>
-                <h3 className="text-2xl md:text-3xl font-clash-medium tracking-wide">
+                <h3 className="text-xl md:text-3xl font-clash-medium tracking-wide">
                   Ready to build something <span className="text-[var(--color-orange)] font-clash-bold"> bold? </span>
                 </h3>
               </div>
@@ -29,13 +28,13 @@ function Footer() {
           </div>
 
           {/* Content Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Links */}
             <div className="space-y-3">
-              <p className="text-sm uppercase tracking-[0.2em] text-white/60 font-switzer">
+              <p className="text-sm uppercase tracking-[0.2em] text-white/80 font-clash-medium">
                 Links
               </p>
-              <div className="flex flex-col gap-2 font-switzer">
+              <div className="flex flex-col gap-2 font-clash-light text-[11px] sm:text-base tracking-wider">
                 <Link to="/" className="hover:text-[var(--color-orange)]">
                   Home
                 </Link>
@@ -56,10 +55,10 @@ function Footer() {
 
             {/* Socials */}
             <div className="space-y-3">
-              <p className="text-sm uppercase tracking-[0.2em] text-white/60 font-switzer">
+              <p className="text-sm uppercase tracking-[0.2em] text-white/80 font-clash-medium">
                 Socials
               </p>
-              <div className="flex flex-col gap-2 font-switzer">
+              <div className="flex flex-col gap-2 font-clash-light text-[11px] sm:text-base tracking-wider">
                 <a
                   href="https://www.linkedin.com"
                   target="_blank"
@@ -100,9 +99,8 @@ function Footer() {
               <p className="text-sm uppercase tracking-[0.2em] text-white/60 font-clash-medium">
                 Contact Info
               </p>
-              <div className="flex flex-col gap-2 font-switzer text-white/80">
+              <div className="flex flex-col gap-2 font-clash-light text-[11px] sm:text-base tracking-wider">
                 <p>Lahore, Pakistan</p>
-                
                 <a
                   href="tel:+923000000000"
                   className="hover:text-[var(--color-orange)]"
@@ -113,19 +111,16 @@ function Footer() {
             </div>
 
             {/* Quick Note */}
-            <div className="space-y-3">
+            {/* <div className="space-y-3">
               <p className="text-sm uppercase tracking-[0.2em] text-white/60 font-clash-medium">
                 Get in Touch
               </p>
               <p className="text-white font-clash-regular leading-relaxed tracking-wide">
-                I’m open to freelance, full-time, and short-term collaborations.
-                Let’s create a meaningful digital experience.
+                I�m open to freelance, full-time, and short-term collaborations.
+                Let�s create a meaningful digital experience.
               </p>
-            </div>
+            </div> */}
           </div>
-
-          {/* Copyright */}
-         
 
           {/* Big Name */}
           <div className="font-wix2 font-bold flex justify-center">
@@ -134,9 +129,11 @@ function Footer() {
             </h1>
           </div>
 
-           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm text-white/60 font-switzer">
-            <p>© 2026 Shahzaib. All rights reserved.</p>
-            <p>Design & Development by <span className="text-[var(--color-orange)]"> Shahzaib ;)</span></p>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm text-white/60 font-switzer">
+            <p>� 2026 Shahzaib. All rights reserved.</p>
+            <p>
+              Design & Development by <span className="text-[var(--color-orange)]"> Shahzaib ;)</span>
+            </p>
           </div>
         </div>
       </div>

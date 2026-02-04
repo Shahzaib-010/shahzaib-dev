@@ -90,7 +90,7 @@ export default function Landingpage() {
   const headingY = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
 
   return (
-    <section className="w-full min-h-[90vh] flex flex-col items-center justify-between relative overflow-hidden">
+    <section className="w-full min-h-[70vh] sm:min-h-[90vh] flex flex-col items-center justify-start sm:justify-between relative overflow-hidden py-10 sm:py-0">
      
 
 
@@ -102,7 +102,7 @@ export default function Landingpage() {
           duration: 1.2,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="relative w-full flex justify-center pt-12 md:pt-16 lg:pt-20 flex-1"
+        className="relative w-full flex justify-center pt-12 sm:pt-12 md:pt-16 lg:pt-40 sm:flex-1"
       >
 
         {/* LEFT TOP LABEL */}
@@ -123,19 +123,19 @@ export default function Landingpage() {
         
 
         {/* MAIN HEADING */}
-        <motion.div style={{ y: headingY }} className="will-change-transform relative">
+        <motion.div style={{ y: headingY }} className="will-change-transform relative text-center">
           
           <Magnet padding={50} disabled={false} magnetStrength={15}>
             <h1
-              className="text-[12vw] sm:text-[10vw] md:text-[11vw] leading-none font-clash-medium font-bold 
-              text-gradient tracking-wide pt-[7vw]"
+              className="text-[17vw] sm:text-[10vw] md:text-[11vw] leading-none font-clash-medium font-bold 
+              text-gradient tracking-wide"
             >
               SHAHZAIB
             </h1>
              
           </Magnet>
-          <div className="mt-4 sm:mt-6 flex flex-col items-center gap-2 sm:gap-3">
-            <p className="text-white/70 font-clash-light text-[10px] sm:text-xs md:text-sm tracking-[0.35em] uppercase text-center px-4">
+          <div className="mt-2 sm:mt-4 flex flex-col items-center gap-2 sm:gap-3">
+            <p className="text-white/70 font-clash-light text-[8px] sm:text-xs md:text-sm tracking-[0.35em] uppercase text-center px-4">
               Product-focused frontend developer
             </p>
             <motion.div
@@ -169,37 +169,37 @@ export default function Landingpage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.8 }}
-        className="w-full flex justify-between items-end-safe pb-6 sm:pb-8"
+        className="w-full flex justify-between items-end-safe pb-4 sm:pb-8 mt-auto"
       >
-        <div className="px-5 pt-2 sm:pt-4 flex flex-col gap-2 sm:gap-3">
+        <div className="px-5 pt-2 sm:pt-4 flex flex-col gap-3 sm:gap-3">
           <a
             href="/resume.pdf"
-            className="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-switzer tracking-[0.25em] uppercase text-white/80 hover:text-white hover:border-white/30 transition-colors"
+            className="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-3 sm:px-4 py-2 text-xs font-switzer tracking-[0.25em] uppercase text-white/80 hover:text-white hover:border-white/30 transition-colors"
           >
             <img src="/images/resume2.png" className="w-4 h-4 opacity-80 group-hover:opacity-100" alt="" />
-            Resume
+            <span className="hidden sm:inline">Resume</span>
           </a>
           <a
             href="https://www.linkedin.com"
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-switzer tracking-[0.25em] uppercase text-white/80 hover:text-white hover:border-white/30 transition-colors"
+            className="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-3 sm:px-4 py-2 text-xs font-switzer tracking-[0.25em] uppercase text-white/80 hover:text-white hover:border-white/30 transition-colors"
           >
             <img src="/images/linkedin.png" className="w-4 h-4 opacity-80 group-hover:opacity-100" alt="" />
-            LinkedIn
+            <span className="hidden sm:inline">LinkedIn</span>
           </a>
           <a
             href="https://github.com"
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-switzer tracking-[0.25em] uppercase text-white/80 hover:text-white hover:border-white/30 transition-colors"
+            className="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-3 sm:px-4 py-2 text-xs font-switzer tracking-[0.25em] uppercase text-white/80 hover:text-white hover:border-white/30 transition-colors"
           >
             <img src="/images/github.png" className="w-4 h-4 opacity-80 group-hover:opacity-100" alt="" />
-            GitHub
+            <span className="hidden sm:inline">GitHub</span>
           </a>
         </div>
 
-        <div className="rotate-90 flex items-center gap-1 pr-4 sm:pr-6">
+        <div className="hidden sm:flex rotate-90 items-center gap-1 pr-4 sm:pr-6">
           <h1 className="text-white tracking-widest font-clash-regular">
             Scroll
           </h1>
