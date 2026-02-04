@@ -2,10 +2,14 @@ import {
   Outlet,
   ScrollRestoration,
 } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { AnimatePresence } from "motion/react";
 import Lenis from "lenis";
+import Loader from "./Loader";
 
 const RootWrapper = () => {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const lenis = new Lenis({
       smoothWheel: true,
@@ -24,11 +28,31 @@ const RootWrapper = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (loading) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    }
+  }, [loading]);
+
   return (
     <>
-      {/* 🔥 THIS FIXES REFRESH SCROLL */}
       <ScrollRestoration getKey={() => null} />
-      <Outlet />
+      <AnimatePresence>
+        {loading && (
+          <Loader durationMs={5000} onComplete={() => setLoading(false)} />
+        )}
+      </AnimatePresence>
+      <div
+        className={`transition-opacity duration-500 ${
+          loading ? "opacity-0" : "opacity-100"
+        }`}
+      >
+        <Outlet />
+      </div>
     </>
   );
 };

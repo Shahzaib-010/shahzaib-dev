@@ -46,6 +46,10 @@
   font-family: clash-display-semibold;
   src: url('/fonts/ClashDisplay-Semibold.ttf');
 }
+@font-face {
+  font-family: Urdu;
+  src: url('/fonts/NotoNastaliqUrdu-VariableFont_wght.ttf');
+}
 
 
 
@@ -70,6 +74,7 @@
     --font-clash-medium: clash-display-medium, "san-serif";
     --font-clash-regular: clash-display-regular, "san-serif";
     --font-clash-light: clash-display-light, "san-serif";
+    --font-urdu: Urdu, "san-serif";
 
 
     

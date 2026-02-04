@@ -10,28 +10,22 @@ import FAQSection from "../components/Sections/faq/FAQSection";
 
 const PageLayout = () => {
   return (
-    <div className="bg-black">
-      
-      <div className="">
-
-     
+    <div className="bg-black relative overflow-hidden">
     
-      
-      {/* Static — not animated */}
-      <ScrollProgress />
-      <Navbar />
-      {/* Animated — ONLY page content transitions */}
-      <PageTransition>
-      <PerspectiveGrid/>
-        
-        <Outlet />
-      </PageTransition>
+      <div className="">
+        {/* Static � not animated */}
+        <ScrollProgress />
+        <Navbar />
+        {/* Animated � ONLY page content transitions */}
+        <PageTransition>
+          <PerspectiveGrid />
+          <Outlet />
+        </PageTransition>
 
-      {/* Static — not animated */}
-      <FAQSection/>
-      <Footer />
-
-       </div>
+        {/* Static � not animated */}
+        <FAQSection />
+        <Footer />
+      </div>
     </div>
   );
 };
