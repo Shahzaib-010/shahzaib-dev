@@ -8,32 +8,11 @@ import Home from "../pages/Home";
 import Contact from "../pages/Contact";
 import About from "../pages/About";
 import Work from "../pages/Work";
-
-
-// Layout
-import PageLayout from "../Layout/PageLayout";
 import RootWrapper from "../components/animations/RootWrapper";
-
-// Smooth Scroll
-import Lenis from "lenis";
-import { useEffect } from "react";
 import Perspective from "../pages/Perspective";
+import PageLayout from "../layout/PageLayout";
 
-// Global smooth scroll + root wrapper
-// const RootWrapper = () => {
-//   useEffect(() => {
-//     const lenis = new Lenis();
 
-//     function raf(time) {
-//       lenis.raf(time);
-//       requestAnimationFrame(raf);
-//     }
-
-//     requestAnimationFrame(raf);
-//   }, []);
-          
-//   return <Outlet />;
-// };
 
 const router = createBrowserRouter([
   {

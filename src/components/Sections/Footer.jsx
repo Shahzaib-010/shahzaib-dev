@@ -102,7 +102,7 @@ function Footer() {
               <div className="flex flex-col gap-2 font-clash-light text-[11px] sm:text-base tracking-wider">
                 <p>Lahore, Pakistan</p>
                 <a
-                  href="tel:+923000000000"
+                  href="tel:+923130672552"
                   className="hover:text-[var(--color-orange)]"
                 >
                   +92 313 0672552

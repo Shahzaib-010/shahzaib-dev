@@ -8,7 +8,6 @@ const words = [
   "مرحبا",
   "Hola",
   "Ciao",
-  "Hej",
   "Hallo",
   
   
