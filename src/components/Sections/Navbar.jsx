@@ -71,7 +71,7 @@ export default function Navbar() {
           opacity: hide ? 0 : 1,
         }}
         transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-        className="fixed top-0 z-50 w-full bg-black"
+        className="fixed top-0 z-50 w-full  backdrop-blur-md bg-black/1   shadow-lg"
       >
         <div className="flex justify-center">
           <div className="w-[90%] h-[4rem] flex items-center justify-between text-white font-clash-medium">

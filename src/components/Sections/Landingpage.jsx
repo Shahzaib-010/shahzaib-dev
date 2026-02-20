@@ -82,6 +82,7 @@
 
 import { motion, useScroll, useTransform } from "motion/react";
 import Magnet from "../ui/Magnet";
+import PerspectiveGrid from "../animations/PerspectiveGrid";
 
 export default function Landingpage() {
   const { scrollYProgress } = useScroll();
@@ -90,8 +91,8 @@ export default function Landingpage() {
   const headingY = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
 
   return (
-    <section className="w-full min-h-[70vh] sm:min-h-[90vh] flex flex-col items-center justify-start sm:justify-between relative overflow-hidden py-10 sm:py-0">
-     
+    <section className="relative  mt-8 w-full h-[60vh] md:h-[95vh] flex flex-col items-center justify-start sm:justify-between relative overflow-hidden py-10 sm:py-0">
+      
 
 
       {/* MAIN WRAPPER */}
@@ -102,7 +103,7 @@ export default function Landingpage() {
           duration: 1.2,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="relative w-full flex justify-center pt-12 sm:pt-12 md:pt-16 lg:pt-40 sm:flex-1"
+        className="relative w-full flex justify-center pt-12 sm:pt-12 md:pt-16 lg:pt-40 sm:flex-1  "
       >
 
         {/* LEFT TOP LABEL */}
@@ -163,6 +164,13 @@ export default function Landingpage() {
         </motion.div> */}
 
       </motion.div>
+
+       {/* <motion.div className="w-full h-[22vw] rounded-xl bg-amber-500 mx-10 ">
+            <img src="./images/hero-img.jpg" 
+            alt=""
+            className=""
+            />
+       </motion.div> */}
 
       {/* BOTTOM SECTION */}
       <motion.div

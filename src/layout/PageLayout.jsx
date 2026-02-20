@@ -10,7 +10,7 @@ import FAQSection from "../components/Sections/faq/FAQSection";
 
 const PageLayout = () => {
   return (
-    <div className="bg-black relative overflow-hidden ">
+    <div className="bg-black bg-[url(/images/noise.svg)] relative overflow-hidden ">
     
       <div className="">
         {/* Static � not animated */}
@@ -18,7 +18,7 @@ const PageLayout = () => {
         <Navbar />
         {/* Animated � ONLY page content transitions */}
         
-          <PerspectiveGrid />
+          
           <Outlet />
        
 

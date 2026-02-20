@@ -3,9 +3,14 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="w-full flex justify-center items-center text-white">
-      <div className="w-[98%] rounded-2xl border border-white/10 bg-black/60 backdrop-blur-xl px-6 py-10 md:px-10 md:py-12">
-        <div className="flex flex-col gap-10">
+    <footer className="relative w-full flex justify-center items-center text-white mb-4">
+      
+      <div className="relative w-[98%] rounded-2xl border border-white/10 bg-black/10 backdrop-blur-2xl px-6 py-10 md:px-10 md:py-12 overflow-hidden">
+      <img src="./images/Ellipse 9.svg"
+      alt="" 
+      className="absolute bottom-[65%] left-[0%] md:bottom-[10%] md:left-[0%] opacity-30 md:opacity-30  z-0"
+      />
+        <div className="relative flex flex-col gap-10 z-100">
           {/* Top Row */}
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 pb-[4vw]">
             <div className="flex items-center gap-5">
@@ -28,7 +33,7 @@ function Footer() {
           </div>
 
           {/* Content Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className=" grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Links */}
             <div className="space-y-3">
               <p className="text-sm uppercase tracking-[0.2em] text-white/80 font-clash-medium">
@@ -54,7 +59,7 @@ function Footer() {
             </div>
 
             {/* Socials */}
-            <div className="space-y-3">
+            <div className="relative z-100 space-y-3">
               <p className="text-sm uppercase tracking-[0.2em] text-white/80 font-clash-medium">
                 Socials
               </p>
@@ -123,11 +128,11 @@ function Footer() {
           </div>
 
           {/* Big Name */}
-          <div className="font-wix2 font-bold flex justify-center">
-            <h1 className="text-[#161616] text-[21vw] leading-none">
+          {/* <div className="font-wix2 font-bold flex justify-center">
+            <h1 className=" text-[21vw] leading-none text-transparent">
               Shahzaib
             </h1>
-          </div>
+          </div> */}
 
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm text-white/60 font-switzer">
             <p>� 2026 Shahzaib. All rights reserved.</p>

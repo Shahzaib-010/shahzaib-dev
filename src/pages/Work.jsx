@@ -3,16 +3,16 @@ import React from "react";
 const projects = [
   {
     number: "01",
-    title: "BOLDCRAFT",
-    role: "UX, UI, Branding",
-    year: "2025",
+    title: "Sialkot Stallionz",
+    role: "Development, UX",
+    year: "2026",
     image: "/images/5sxpQeVzXaGycp162tMtytRY.avif",
     desc: "A bold brand system focused on clarity, pace, and conversion.",
-    repo: "https://github.com/yourname/boldcraft",
+    repo: "https://sialkotstallionz.com",
   },
   {
     number: "02",
-    title: "Q-CHART",
+    title: "HRMIS",
     role: "UX, UI, Development",
     year: "2025",
     image: "/images/0ramsUE1tOARs2GDYldPlBdVTP8.avif",

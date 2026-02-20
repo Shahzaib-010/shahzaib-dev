@@ -29,7 +29,7 @@ function About() {
         </div>
 
         {/* Highlights */}
-        <div className="space-y-4">
+        {/* <div className="space-y-4">
           <motion.div
             whileHover={{ y: -4 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -100,7 +100,7 @@ function About() {
               Clean code, reusable components, and a focus on maintainability.
             </p>
           </motion.div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
