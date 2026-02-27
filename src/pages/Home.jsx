@@ -19,10 +19,10 @@ export default function Home() {
 
      
  
-        <div className="hidden lg:block relative  flex flex-col justify-center items-center">
+        <div className=" relative  flex flex-col justify-center items-center">
             <img src="./images/Ellipse 9.svg" 
              alt=""
-             className="absolute top-[6%] left-[15%]  md:top-[2%] md:left-[60%] opacity-40" 
+             className="absolute hidden lg:block top-[6%] left-[15%]  md:top-[2%] md:left-[60%] opacity-40" 
            />
 
           
