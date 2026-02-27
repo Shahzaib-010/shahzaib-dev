@@ -14,12 +14,12 @@ export default function Home() {
        
      <img src="./images/Ellipse 10.svg" 
           alt=""
-          className="absolute hidden md:block  md:bottom-[88%] md:right-[50%] opacity-40" 
+          className="absolute hidden lg:block  md:bottom-[88%] md:right-[50%] opacity-40" 
            />
 
      
  
-        <div className="hidden md:block relative  flex flex-col justify-center items-center">
+        <div className="hidden lg:block relative  flex flex-col justify-center items-center">
             <img src="./images/Ellipse 9.svg" 
              alt=""
              className="absolute top-[6%] left-[15%]  md:top-[2%] md:left-[60%] opacity-40" 
