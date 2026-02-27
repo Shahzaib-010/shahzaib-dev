@@ -181,7 +181,7 @@ export default function Landingpage() {
       >
         <div className="px-5 pt-2 sm:pt-4 flex flex-col gap-3 sm:gap-3">
           <a
-            href="/resume.pdf"
+            href="/Shahzaib.pdf"
             download="Shahzaib.pdf"
             className="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-3 sm:px-4 py-2 text-xs font-switzer tracking-[0.25em] uppercase text-white/80 hover:text-white hover:border-white/30 transition-colors"
           >
@@ -189,7 +189,7 @@ export default function Landingpage() {
             <span className="hidden sm:inline">Resume</span>
           </a>
           <a
-            href="www.linkedin.com/in/shahzaibanwar-dev"
+            href="https://www.linkedin.com/in/shahzaibanwar-dev"
             target="_blank"
             rel="noreferrer"
             className="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-3 sm:px-4 py-2 text-xs font-switzer tracking-[0.25em] uppercase text-white/80 hover:text-white hover:border-white/30 transition-colors"
