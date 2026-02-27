@@ -10,7 +10,7 @@ import FAQSection from "../components/Sections/faq/FAQSection";
 
 const PageLayout = () => {
   return (
-    <div className="bg-black bg-[url(/images/noise.svg)] relative overflow-hidden ">
+    <div className="bg-black md:bg-[url(/images/noise.svg)] relative overflow-hidden ">
     
       <div className="">
         {/* Static � not animated */}
