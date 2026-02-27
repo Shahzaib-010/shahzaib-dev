@@ -58,9 +58,9 @@ export default function Navbar() {
   ];
 
   const socials = [
-    { href: "https://github.com", label: "GitHub" },
-    { href: "https://www.linkedin.com", label: "LinkedIn" },
-    { href: "https://www.behance.net", label: "Behance" },
+    { href: "https://github.com/Shahzaib-010/", label: "GitHub" },
+    { href: "https://www.linkedin.com/in/shahzaibanwar-dev", label: "LinkedIn" },
+    
   ];
 
   return (
