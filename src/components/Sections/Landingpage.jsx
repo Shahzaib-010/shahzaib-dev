@@ -137,7 +137,7 @@ export default function Landingpage() {
           </Magnet>
           <div className="mt-2 sm:mt-4 flex flex-col items-center gap-2 sm:gap-3">
             <p className="text-white/70 font-clash-light text-[8px] sm:text-xs md:text-sm tracking-[0.35em] uppercase text-center px-4">
-              Product-focused frontend developer
+              Creative Frontend Developer
             </p>
             <motion.div
               initial={{ width: 0, opacity: 0 }}
@@ -182,14 +182,14 @@ export default function Landingpage() {
         <div className="px-5 pt-2 sm:pt-4 flex flex-col gap-3 sm:gap-3">
           <a
             href="/resume.pdf"
-            download="Shahzaib_Resume.pdf"
+            download="Shahzaib.pdf"
             className="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-3 sm:px-4 py-2 text-xs font-switzer tracking-[0.25em] uppercase text-white/80 hover:text-white hover:border-white/30 transition-colors"
           >
             <img src="/images/resume2.png" className="w-4 h-4 opacity-80 group-hover:opacity-100" alt="" />
             <span className="hidden sm:inline">Resume</span>
           </a>
           <a
-            href="https://www.linkedin.com"
+            href="www.linkedin.com/in/shahzaibanwar-dev"
             target="_blank"
             rel="noreferrer"
             className="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-3 sm:px-4 py-2 text-xs font-switzer tracking-[0.25em] uppercase text-white/80 hover:text-white hover:border-white/30 transition-colors"
@@ -198,7 +198,7 @@ export default function Landingpage() {
             <span className="hidden sm:inline">LinkedIn</span>
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/Shahzaib-010/"
             target="_blank"
             rel="noreferrer"
             className="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-3 sm:px-4 py-2 text-xs font-switzer tracking-[0.25em] uppercase text-white/80 hover:text-white hover:border-white/30 transition-colors"

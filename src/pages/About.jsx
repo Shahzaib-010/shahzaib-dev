@@ -7,12 +7,12 @@ function About() {
     <section className="w-full text-white flex flex-col items-center pt-16 pb-24">
       {/* Header */}
       <div className="w-full max-w-6xl px-6">
-        <p className="text-sm uppercase tracking-[0.35em] text-white/60 font-switzer">
+        {/* <p className="text-sm uppercase tracking-[0.35em] text-white/60 font-switzer">
           About
-        </p>
+        </p> */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <h2 className="text-4xl md:text-6xl font-clash-medium text-gradient leading-tight">
-            Design Precision
+            About Me
           </h2>
         </div>
       </div>

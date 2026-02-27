@@ -68,12 +68,12 @@ const skills = [
     icon: "/images/icons/vite.svg",
     bgClass: "bg-indigo-400/10 border-white/10 border",
   },
-  {
-    name: "Material UI",
-    desc: "Component Library",
-    icon: "/images/icons/materialui.svg",
-    bgClass: "bg-blue-400/10 border-white/10 border",
-  },
+  // {
+  //   name: "Material UI",
+  //   desc: "Component Library",
+  //   icon: "/images/icons/materialui.svg",
+  //   bgClass: "bg-blue-400/10 border-white/10 border",
+  // },
   {
     name: "HTML",
     desc: "Structure",

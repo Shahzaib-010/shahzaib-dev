@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -65,37 +64,23 @@ function Footer() {
               </p>
               <div className="flex flex-col gap-2 font-clash-light text-[11px] sm:text-base tracking-wider">
                 <a
-                  href="https://www.linkedin.com"
+                  href="www.linkedin.com/in/shahzaibanwar-dev"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-[var(--color-orange)]"
                 >
                   LinkedIn
                 </a>
+                
                 <a
-                  href="https://www.behance.net"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-[var(--color-orange)]"
-                >
-                  Behance
-                </a>
-                <a
-                  href="https://github.com"
+                  href="https://github.com/Shahzaib-010/"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-[var(--color-orange)]"
                 >
                   GitHub
                 </a>
-                <a
-                  href="https://www.instagram.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-[var(--color-orange)]"
-                >
-                  Instagram
-                </a>
+                
               </div>
             </div>
 
