@@ -14,10 +14,10 @@ const projects = [
     number: "02",
     title: "HRMIS",
     role: "UX, UI, Development",
-    year: "2025",
+    year: "2026",
     image: "/images/0ramsUE1tOARs2GDYldPlBdVTP8.avif",
     desc: "The Complete Solution for Daily HR Operations and Workforce Management.",
-    repo: "https://github.com/yourname/q-chart",
+    repo: "https://github.com/Shahzaib-010/HRMIS.git",
   },
   {
     number: "03",
@@ -26,7 +26,7 @@ const projects = [
     year: "2026",
     image: "/images/5sxpQeVzXaGycp162tMtytRY.avif",
     desc: "An interactive digital portfolio presenting featured projects, technical skills, and development expertise.",
-    repo: "https://github.com/yourname/book-pay",
+    repo: "https://github.com/Shahzaib-010/shahzaib-dev.git",
   },
 ];
 

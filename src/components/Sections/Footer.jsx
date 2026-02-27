@@ -64,7 +64,7 @@ function Footer() {
               </p>
               <div className="flex flex-col gap-2 font-clash-light text-[11px] sm:text-base tracking-wider">
                 <a
-                  href="www.linkedin.com/in/shahzaibanwar-dev"
+                  href="https://www.linkedin.com/in/shahzaibanwar-dev"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-[var(--color-orange)]"
